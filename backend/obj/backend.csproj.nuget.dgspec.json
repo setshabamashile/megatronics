@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\megatronics\\backend\\backend.csproj": {}
+    "C:\\megatronics\\backend\\backend.csproj": {}
   },
   "projects": {
-    "D:\\megatronics\\backend\\backend.csproj": {
+    "C:\\megatronics\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\megatronics\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\megatronics\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "D:\\megatronics\\backend\\backend.csproj",
+        "projectPath": "C:\\megatronics\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\setsh\\.nuget\\packages\\",
-        "outputPath": "D:\\megatronics\\backend\\obj\\",
+        "outputPath": "C:\\megatronics\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\setsh\\AppData\\Roaming\\NuGet\\NuGet.Config"
