@@ -1,3 +1,4 @@
+
 using Microsoft.EntityFrameworkCore;
 using Megatronics.Api.Data;
 using Megatronics.Api.Configuration;
@@ -13,8 +14,11 @@ builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<PayFastService>();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-    ?? throw new InvalidOperationException("DefaultConnection is not configured.");
+var connectionString = builder.Configuration
+    .GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException(
+        "DefaultConnection is not configured."
+    );
 
 builder.Services.AddDbContext<MegatronicsDbContext>(options =>
     options.UseSqlServer(connectionString)
@@ -36,13 +40,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-
+// Enable API documentation in Development and Production.
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
